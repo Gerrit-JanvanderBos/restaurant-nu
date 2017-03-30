@@ -9,6 +9,10 @@
 
 <body <?php body_class(); ?>>
 
+<div class="header-menu">
+  <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
+</div>
+
 <div class="blog-masthead">
   <div class="container">
     <?php wp_nav_menu(array(
@@ -17,12 +21,3 @@
     ));?>
   </div>
 </div>
-
-<div class="container">
-  <div class="blog-header">
-  <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-  <?php $description = get_bloginfo('description', 'display'); ?>
-  <?php if('description') { ?><p class="lead blog-description"><?php echo $description ?></p><?php }?>
-</div>
-
-<div class="row">
